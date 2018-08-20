@@ -25,9 +25,10 @@
         </ul>
         
         <ul class="user-navigation">
-          <li><form class="search">
-          
-        </form>
+          <li>
+            <form class="search" method="get" action="https://echo.htmlacademy.ru">
+              <input type="search" name="search-field" class="search-field" id="search" placeholder="Что ищем?">
+              <label for="search" class="visually-hidden">Поиск</label>
           </li>
           <li>
             <a href="#login" class="login-link">Вход</a>
@@ -58,8 +59,73 @@
       <h1 class="page-title">Сливочное мороженое</h1>
 
       <section class="filters">
-        <h2 class="visually-hiden">Фильтр товаров</h2>
-        <form>
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <form method="get" action="https://echo.htmlacademy.ru" class="filter-form" >
+          <fieldset>
+            <legend>Сортировка:</legend>
+            <select>
+              <option selected>по популярности</option>
+              <option>сначала недорогие</option>
+              <option>сначала дорогие</option>
+              <option>по жирности</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Цена 100руб. - 500 руб.</legend>
+              <input type="range" name="-cost-range" class="cost-range" min="100" max="250" id="cost-range1">
+              <label class="visually-hidden" for="cost-range1">Минимальная цена</label>
+              <input type="range" name="cost-range" class="cost-range" min="250" max="500" id="cost-range2">
+              <label class="visually-hidden" for="cost-range2">Максимальная цена</label>
+          </fieldset>
+          <fieldset>
+            <legend>Жирность</legend>
+            <ul>
+              <li>
+                <input type="radio" name="fat-content" class="visually-hidden" value="0%" id="fat-content-0">
+                <label for="fat-content-0">0%</label>
+              </li>
+              <li>
+                <input type="radio" name="fat-content" class="visually-hidden" value="max-10%" id="fat-content-max-10" checked>
+                <label for="fat-content-max-10">До 10%</label>
+              </li>
+              <li>
+                <input type="radio" name="fat-content" class="visually-hidden" value="max-30%" id="fat-content-max-30">
+                <label for="fat-content-max-30">До 30%</label>
+              </li>
+              <li>
+                <input type="radio" name="fat-content" class="visually-hidden" value="min-30%" id="fat-content-min-30">
+                <label for="fat-content-min-30">Выше 30%</label>
+              </li>
+
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Наполнители</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="chocolate" class="visually-hidden" id="filter-chocolate" checked>
+                <label for="filter-chocolate">шоколадные</label>
+              </li>
+              <li>
+                <input type="checkbox" name="sugar" class="visually-hidden" id="filter-sugar" >
+                <label for="filter-sugar">сахарные присыпки</label>
+              </li>
+              <li>
+                <input type="checkbox" name="fruit" class="visually-hidden" id="filter-fruit" >
+                <label for="filter-fruit">срукты</label>
+              </li>
+              <li>
+                <input type="checkbox" name="syrup" class="visually-hidden" id="filter-syrup" >
+                <label for="filter-syrup">сиропы</label>
+              </li>
+              <li>
+                <input type="checkbox" name="jam" class="visually-hidden" id="filter-jam" >
+                <label for="filter-jam">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="sumbit" class="button filter-button">Применить</button>
+
           
         </form>
         

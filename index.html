@@ -26,7 +26,9 @@
         
         <ul class="user-navigation">
           <li>
-            <form class="search">
+            <form class="search" method="get" action="https://echo.htmlacademy.ru">
+              <input type="search" name="search-field" class="search-field" id="search" placeholder="Что ищем?">
+              <label for="search" class="visually-hidden">Поиск</label>
           
         </form>
           </li>
@@ -51,9 +53,15 @@
         <div class="slide1">Крем-брюле и пломбир с малиновым джемом</div>
         <div class="slide2">Шоколадный пломбир и лимонный сорбет</div>
         <div class="slide3">Пломбир с помадкой и клубничный щербет</div>
-        <span class="slider-button"></span>
-        <span class="slider-button"></span>
-        <span class="slider-button"></span>
+        <form method="post" action="https://echo.htmlacademy.ru" class="slider-form">
+          <input type="radio" name="slide-filter" class="visually-hidden" id="slide1" value="slide1">
+          <input type="radio" name="slide-filter" class="visually-hidden" id="slide2" value="slide2">
+          <input type="radio" name="slide-filter" class="visually-hidden" id="slide3"
+          value="slide3">
+        
+        <label class="slider-button" for="slide1">Крем-брюле и пломбир с малиновым джемом</label>
+        <label class="slider-button" for="slide2">Шоколадный пломбир и лимонный сорбет</label>>
+        <label class="slider-button" for="slide3">Пломбир с помадкой и клубничный щербет</label>>
         <a href="#catalog" class="button">Давайте оба!</a>
       </div>
       <section class="shares">
@@ -131,7 +139,7 @@
       </section>
       <section class="location">
         <h2 class="visually-hidden">Как нас найти</h2>
-        <!-- <a href="#map"><img src="placehold.it" ></a> тут должна быть карта -->
+        <img src="img/map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
         <div class="contacts">
           <p>Адрес главного офиса<br>
             и офлайн-магазина:<br>
@@ -181,17 +189,43 @@
     <section class="modal modal-login">
       <h2 class="visually-hidden">Вход в профиль</h2>
       
-      <form>
+      <form method="post" action="https://echo.htmlacademy.ru" class="login-form">
+        <p>
+          <input type="text" name="login" id="login" placeholder="Электронная почта" required>
+          <label for="login" class="visually-hidden">Электронная почта</label>
+        </p>
+        <p>  
+          <input type="password" name="password" id="password" placeholder="Пароль" required>
+          <label for="password" class="visually-hidden">Пароль</label>
+        </p>  
+        <button type="submit" class="button login-form-button">Войти</button>
         
       </form>
       <a href="#">Забыли пароль?</a>
       <a href="#">Новая регистрация</a>
     </section>
-    <section class="feedback">
+    <section class="modal modal-feedback">
       <h2>Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
-      <span>X</span>
-      <form></form>
+      
+      <form>
+        <p>
+          <input type="text" name="name" id="name" placeholder="Как вас зовут?" required>
+          <label class="visually-hidden" for="name">Имя</label>
+        </p>
+        <p>  
+          <input type="text" name="email" id="email" placeholder="Ваша почта для ответа?" required>
+          <label class="visually-hidden" for="email">Элктронная почта</label>
+        </p>
+        <p>
+          <textarea name="your-feedback" id="your-feedback" placeholder="Напишите что нибудь..." rows="5">
+            
+          </textarea>
+          <label class="visually-hidden" for="your-feedback">Ваш отзыв</label>
+        </p>
+        <button type="submit" class="button modal-feedback-button">Отправить</button>  
+      </form>
+      <button type="button" class="modal-close-button"></button>
     </section>
 
 
