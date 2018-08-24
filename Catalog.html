@@ -2,7 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
+    <title>HTML Academy: Глейси-каталог</title>
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic">
+    <link rel="stylesheet"  href="css/normalize.css">
+    <link rel="stylesheet"  href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -11,10 +14,10 @@
           <img src="img/logo.svg" width="154" height="64" alt="Логотип интернет-магазина Глейси">
         </a>
         <ul class="main-menu">
-          <li class="active"><a href="catalog.html">Каталог</a>
+          <li ><a href="catalog.html" class="active">Каталог</a>
             <ul class="catalog-menu">
               <li><a href="#new">Новинки</a></li>
-              <li class="active"><a href="#cream">Сливочное</a></li>
+              <li><a href="#cream" class="active">Сливочное</a></li>
               <li><a href="#sorbet">Щербеты</a></li>
               <li><a href="#fruitice">Фруктовый лед</a></li>
               <li><a href="#melorin">Мелорин</a></li>
@@ -29,17 +32,18 @@
             <form class="search" method="get" action="https://echo.htmlacademy.ru">
               <input type="search" name="search-field" class="search-field" id="search" placeholder="Что ищем?">
               <label for="search" class="visually-hidden">Поиск</label>
+            </form> 
           </li>
           <li>
             <a href="#login" class="login-link">Вход</a>
           </li>
           <li>
-             <a href="#basket" class="basket-link">2 товара</a>
+             <a href="#basket" class="basket-link basket-with-items">2 товара</a>
           </li>
         </ul>
        
       </nav>
-      <p>с 10 до 20, ежедневно<br>
+      <p class="header-contacts">с 10 до 20, ежедневно<br>
         <b>8 812 450-25-25</b>
       </p>
     </header>
@@ -52,18 +56,18 @@
           <a href="#catalog">Каталог</a>
         </li>
         <li class="breadcrumbs-current">
-          Сливочное
+          <a>Сливочное</a>
         </li>
       </ul>
 
-      <h1 class="page-title">Сливочное мороженое</h1>
+      <h1 class="catalog-title">Сливочное мороженое</h1>
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form method="get" action="https://echo.htmlacademy.ru" class="filter-form" >
           <fieldset>
             <legend>Сортировка:</legend>
-            <select>
+            <select name="sorting">
               <option selected>по популярности</option>
               <option>сначала недорогие</option>
               <option>сначала дорогие</option>
@@ -79,7 +83,7 @@
           </fieldset>
           <fieldset>
             <legend>Жирность</legend>
-            <ul>
+            <ul class="filter-radio-list">
               <li>
                 <input type="radio" name="fat-content" class="visually-hidden" value="0%" id="fat-content-0">
                 <label for="fat-content-0">0%</label>
@@ -101,13 +105,13 @@
           </fieldset>
           <fieldset>
             <legend>Наполнители</legend>
-            <ul>
+            <ul class="filter-checkbox-list">
               <li>
                 <input type="checkbox" name="chocolate" class="visually-hidden" id="filter-chocolate" checked>
                 <label for="filter-chocolate">шоколадные</label>
               </li>
               <li>
-                <input type="checkbox" name="sugar" class="visually-hidden" id="filter-sugar" >
+                <input type="checkbox" name="sugar" class="visually-hidden" id="filter-sugar"  checked>
                 <label for="filter-sugar">сахарные присыпки</label>
               </li>
               <li>
@@ -124,7 +128,7 @@
               </li>
             </ul>
           </fieldset>
-          <button type="sumbit" class="button filter-button">Применить</button>
+          <button type="sumbit" class="filter-button">Применить</button>
 
           
         </form>
@@ -183,6 +187,9 @@
           </li>
         </ul>
         <ul class="pagination-list">
+          <li class="pagination-item ">
+            <a><</a>
+          </li>
           <li class="pagination-item pagination-item-current">
             <a>1</a>
           </li>
@@ -219,7 +226,7 @@
         </ul>
       </div>
       <div class="footer-menu">
-        <ul>
+        <ul class="footer-menu-list">
           <li>
             <a href="#">Для поставщиков</a>
           </li>
@@ -246,7 +253,7 @@
       <table class="basket-table">
         <tr class="basket-row">
           <td class="basket-item-del">
-            <span class="button">x</span> 
+            <button type="button" class="close-button">удалить</button>
           </td>
           <td class="basket-item-img">
             <a href="#"><img src="img/ice-cream-1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33"></a> 
@@ -266,7 +273,7 @@
         </tr>
         <tr class="basket-row">
           <td class="basket-item-del">
-            <span class="button">x</span> 
+            <button type="button" class="close-button">удалить</button> 
           </td>
           <td class="basket-item-img">
             <a href="#"><img src="img/ice-cream-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></a> 
@@ -286,7 +293,7 @@
         </tr>
       </table>
       <div class="checkout">
-        Итого: 750 руб
+        <b>Итого: 750 руб</b>
         <a href="#" class="button">Оформить заказ</a>
 
         
@@ -295,12 +302,20 @@
     <section class="modal modal-login">
       <h2 class="visually-hidden">Вход в профиль</h2>
       
-      <form>
+      <form method="post" action="https://echo.htmlacademy.ru" class="login-form">
+        <p>
+          <input type="text" name="login" id="login" placeholder="Электронная почта" required>
+          <label for="login" class="visually-hidden">Электронная почта</label>
+        </p>
+        <p>  
+          <input type="password" name="password" id="password" placeholder="Пароль" required>
+          <label for="password" class="visually-hidden">Пароль</label>
+        </p>  
+        <button type="submit" class="button login-form-button">Войти</button>
         
       </form>
       <a href="#">Забыли пароль?</a>
       <a href="#">Новая регистрация</a>
-      
     </section>
   </body>
 </html>

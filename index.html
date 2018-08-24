@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic">
+    <link rel="stylesheet"  href="css/normalize.css">
+    <link rel="stylesheet"  href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -13,11 +16,11 @@
         <ul class="main-menu">
           <li><a href="catalog.html">Каталог</a>
             <ul class="catalog-menu">
-              <li><a href="#new">Новинки</a></li>
-              <li><a href="#cream">Сливочное</a></li>
-              <li><a href="#sorbet">Щербеты</a></li>
-              <li><a href="#fruitice">Фруктовый лед</a></li>
-              <li><a href="#melorin">Мелорин</a></li>
+              <li class="catalog-menu-item"><a href="#new">Новинки</a></li>
+              <li class="catalog-menu-item"><a href="#cream">Сливочное</a></li>
+              <li class="catalog-menu-item"><a href="#sorbet">Щербеты</a></li>
+              <li class="catalog-menu-item"><a href="#fruitice">Фруктовый лед</a></li>
+              <li class="catalog-menu-item"><a href="#melorin">Мелорин</a></li>
             </ul>
           </li>  
           <li><a href="#delivery">Доставка и оплата</a></li>
@@ -25,12 +28,12 @@
         </ul>
         
         <ul class="user-navigation">
-          <li>
+          <li class="modal modal-search">
             <form class="search" method="get" action="https://echo.htmlacademy.ru">
               <input type="search" name="search-field" class="search-field" id="search" placeholder="Что ищем?">
               <label for="search" class="visually-hidden">Поиск</label>
           
-        </form>
+            </form>
           </li>
           <li>
             <a href="#login" class="login-link">Вход</a>
@@ -41,7 +44,7 @@
         </ul>
         
       </nav>
-      <p>с 10 до 20, ежедневно<br>
+      <p class="header-contacts">с 10 до 20, ежедневно<br>
         <b>8 812 450-25-25</b>
       </p>
     </header>
@@ -53,16 +56,18 @@
         <div class="slide1">Крем-брюле и пломбир с малиновым джемом</div>
         <div class="slide2">Шоколадный пломбир и лимонный сорбет</div>
         <div class="slide3">Пломбир с помадкой и клубничный щербет</div>
-        <form method="post" action="https://echo.htmlacademy.ru" class="slider-form">
-          <input type="radio" name="slide-filter" class="visually-hidden" id="slide1" value="slide1">
-          <input type="radio" name="slide-filter" class="visually-hidden" id="slide2" value="slide2">
-          <input type="radio" name="slide-filter" class="visually-hidden" id="slide3"
-          value="slide3">
-        
-        <label class="slider-button" for="slide1">Крем-брюле и пломбир с малиновым джемом</label>
-        <label class="slider-button" for="slide2">Шоколадный пломбир и лимонный сорбет</label>>
-        <label class="slider-button" for="slide3">Пломбир с помадкой и клубничный щербет</label>>
-        <a href="#catalog" class="button">Давайте оба!</a>
+        <ul class="slides-switches">
+          <li class="slider-radio">
+            <button></button>
+          </li>
+          <li class="slider-radio">
+            <button></button>
+          </li>
+          <li class="slider-radio">
+            <button></button>
+          </li>
+        </ul>
+        <a href="#catalog" class="button slider-button">Давайте оба!</a>
       </div>
       <section class="shares">
         
@@ -70,7 +75,7 @@
 
         <ul class="shares-list">
           <li class="shares-item free-jam">
-            <h3>Малинка даром</h3>
+            <h3>Малинка даром!</h3>
             <p>При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
             <a href="#catalog" class="button">Хочу варенье!</a>
           </li>
@@ -126,15 +131,21 @@
       </section>
       <article class="blog-new">
         <h2>Новое в нашем блоге</h2>
-        <a href="#blog" class="blog-link"><p>10 способов сервировки фруктовых щербетов к столу</p>
+        <a href="#" class="blog-link"><p>10 способов сервировки фруктовых щербетов к столу</p>
         </a>
       </article>
-      <section class="Subscription">
-        <h2 class="visually-hidden">Рассылка</h2>
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно=) </p>
-        <form>
-          
-        </form>
+      <section class="subscription">
+          <div class="sub-box">
+           
+            <h2 class="visually-hidden">Рассылка</h2>
+            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно=) </p>
+            <form method="post" action="https://echo.htmlacademy.ru"  class="subscription-form">
+              <input type="email" name="subscription-email" id="subscription-email" placeholder="Электроная почта" required>
+              <label for="subscription-email" class="visually-hidden">Электроная почта</label>
+              <button type="submit" class="button">Отправить</button> 
+            
+            </form>
+          </div>  
         
       </section>
       <section class="location">
@@ -164,7 +175,7 @@
         </ul>
       </div>
       <div class="footer-menu">
-        <ul>
+        <ul class="footer-menu-list">
           <li>
             <a href="#">Для поставщиков</a>
           </li>
@@ -208,7 +219,7 @@
       <h2>Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
       
-      <form>
+      <form method="post" action="https://echo.htmlacademy.ru">
         <p>
           <input type="text" name="name" id="name" placeholder="Как вас зовут?" required>
           <label class="visually-hidden" for="name">Имя</label>
