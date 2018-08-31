@@ -9,10 +9,10 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-navigation">
-        <a href="index.html" class="main-header-logo">
+      <nav class="main-navigation container">
+        <a href="index.html" class="header-logo">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип интернет-магазина Глейси ">
-        </a>
+       </a>
         <ul class="main-menu">
           <li><a href="catalog.html">Каталог</a>
             <ul class="catalog-menu">
@@ -26,13 +26,13 @@
           <li><a href="#delivery">Доставка и оплата</a></li>
           <li><a href="#about-company">О Компании</a></li>
         </ul>
-        
+          
         <ul class="user-navigation">
           <li class="modal modal-search">
             <form class="search" method="get" action="https://echo.htmlacademy.ru">
               <input type="search" name="search-field" class="search-field" id="search" placeholder="Что ищем?">
               <label for="search" class="visually-hidden">Поиск</label>
-          
+            
             </form>
           </li>
           <li>
@@ -42,11 +42,12 @@
             <a href="#basket" class="basket-link">Пусто</a>
           </li>
         </ul>
-        
       </nav>
-      <p class="header-contacts">с 10 до 20, ежедневно<br>
-        <b>8 812 450-25-25</b>
-      </p>
+      <div class="container">
+        <p class="header-contacts">с 10 до 20, ежедневно<br>
+          <b>8 812 450-25-25</b>
+        </p>
+      </div>  
     </header>
     <main class="container">
 
@@ -119,7 +120,7 @@
             <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
           </li>
           <li class="features-item">
-            <p>Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавкипроизведены из натурального, экологический чистого сырья.</p>
+            <p>Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологический чистого сырья.</p>
           </li>
           <li class="features-item">
             <p>Закупка ингридиентов производится у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество</p>
@@ -129,43 +130,48 @@
           </li>
         </ul>
       </section>
-      <article class="blog-new">
-        <h2>Новое в нашем блоге</h2>
-        <a href="#" class="blog-link"><p>10 способов сервировки фруктовых щербетов к столу</p>
-        </a>
-      </article>
-      <section class="subscription">
-          <div class="sub-box">
-           
-            <h2 class="visually-hidden">Рассылка</h2>
-            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно=) </p>
-            <form method="post" action="https://echo.htmlacademy.ru"  class="subscription-form">
-              <input type="email" name="subscription-email" id="subscription-email" placeholder="Электроная почта" required>
-              <label for="subscription-email" class="visually-hidden">Электроная почта</label>
-              <button type="submit" class="button">Отправить</button> 
-            
-            </form>
-          </div>  
-        
-      </section>
-      <section class="location">
-        <h2 class="visually-hidden">Как нас найти</h2>
-        <img src="img/map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
-        <div class="contacts">
-          <p>Адрес главного офиса<br>
+      <div class="blog-sub-container">
+        <article class="blog-new">
+          <h2>Новое в нашем блоге</h2>
+          <a href="#" class="blog-link"><p>10 способов сервировки фруктовых щербетов к столу</p>
+          </a>
+        </article>
+        <section class="subscription">
+            <div class="sub-box">
+             
+              <h2 class="visually-hidden">Рассылка</h2>
+              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно=) </p>
+              <form method="post" action="https://echo.htmlacademy.ru"  class="subscription-form">
+                <input type="email" name="subscription-email" id="subscription-email" placeholder="Электроная почта" required>
+                <label for="subscription-email" class="visually-hidden">Электроная почта</label>
+                <button type="submit" class="button">Отправить</button> 
+              
+              </form>
+            </div>  
+          
+        </section>
+      </div>
+    </main>    
+    <section class="location">
+      <h2 class="visually-hidden">Как нас найти</h2>
+      <!-- <img src="img/map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430"> -->
+      <div class="location-address">
+      <div class="contacts">
+        <p>Адрес главного офиса<br>
             и офлайн-магазина:<br>
-            <b>ул.Большая Конюшенная<br>
+          <b>ул.Большая Конюшенная<br>
               19/8, Санкт-Петербург<br>
-            </b></p>
-            <p>Для заказов по телефону:<br>
-              <b>8 812 450-25-25</b><br>
-            (с 10 до 20 ежедневно)</p>
+          </b>
+        </p>
+        <p>Для заказов по телефону:<br>
+          <b>8 812 450-25-25</b><br>
+            (с 10 до 20 ежедневно)
+        </p>
             <a href="#" class="button">Форма обратной связи</a>
-        </div>
-
-      </section>
-    </main>
-    <footer class="main-footer">
+      </div>
+   </div>
+    </section>
+    <footer class="main-footer container">
       <div class="footer-social">
         <ul class="footer-social-list">
           <li><a href="#" class="social-button social-button-tw">Твитер</a></li>
