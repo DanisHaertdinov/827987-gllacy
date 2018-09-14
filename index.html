@@ -10,7 +10,7 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation container">
-        <a href="index.html" class="header-logo">
+        <a class="header-logo">
         <img src="img/logo.svg" width="154" height="64" alt="Логотип интернет-магазина Глейси ">
         </a>
         <ul class="main-menu">
@@ -18,7 +18,7 @@
             <a href="catalog.html"><span>Каталог</span></a>
             <ul class="catalog-menu">
               <li class="catalog-menu-item"><a href="#new">Новинки</a></li>
-              <li class="catalog-menu-item"><a href="#cream">Сливочное</a></li>
+              <li class="catalog-menu-item"><a href="catalog.html">Сливочное</a></li>
               <li class="catalog-menu-item"><a href="#sorbet">Щербеты</a></li>
               <li class="catalog-menu-item"><a href="#fruitice">Фруктовый лед</a></li>
               <li class="catalog-menu-item"><a href="#melorin">Мелорин</a></li>
@@ -56,7 +56,9 @@
                 <label for="login" class="visually-hidden">Электронная почта</label>
                 <input type="password" name="password" id="password" placeholder="Пароль" required>
                 <label for="password" class="visually-hidden">Пароль</label><button type="submit" class="button login-form-button">Войти</button>
-                <div class="modal-login-links"><a href="#">Забыли пароль?</a><a href="#">Новая регистрация</a></div>
+                <div class="modal-login-links">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a></div>
               </form>
             </div>
           </li>
@@ -224,14 +226,14 @@
         </ul>
       </div>
       <div class="footer-copyright">
-        <a href="htmlacademy.ru" class="htmlacademy-logo"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy-logo"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
         <p>
-          Сделано в <a href="htmlacademy.ru">HTML Academy</a> © 2017
+          Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
         </p>
       </div>
     </footer>
     <section class="modal modal-feedback">
-      <h2>Форма обратной связи</h2>
+      <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
       <form method="post" action="https://echo.htmlacademy.ru">
         <p>
@@ -243,8 +245,7 @@
           <label class="visually-hidden" for="email">Элктронная почта</label>
         </p>
         <p>
-          <textarea name="your-feedback" id="your-feedback" placeholder="Напишите что нибудь..." rows="5">
-          </textarea>
+          <textarea name="your-feedback" id="your-feedback" placeholder="Напишите что нибудь..." rows="5"></textarea>
           <label class="visually-hidden" for="your-feedback">Ваш отзыв</label>
         </p>
         <button type="submit" class="button modal-feedback-button">Отправить</button>  
