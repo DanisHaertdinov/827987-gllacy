@@ -11,7 +11,7 @@ var slide3 = document.querySelector(".slide3");
 var slider_radio1 = document.querySelector(".slider-radio1");
 var slider_radio2 = document.querySelector(".slider-radio2");
 var slider_radio3 = document.querySelector(".slider-radio3");
-var background = document.querySelector("body"); 
+var background = document.querySelector(".site-wrapper"); 
 
 link.addEventListener("click", function (evt) {
 	evt.preventDefault();

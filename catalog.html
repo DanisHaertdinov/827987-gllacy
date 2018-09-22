@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси-каталог</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/min-normalize.css">
     <link rel="stylesheet" href="css/min-css.css">
   </head>
   <body class="inner-page">
@@ -36,9 +36,12 @@
         </ul>
         <ul class="user-navigation">
           <li class="modal modal-search">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
-              <path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
-            </svg>
+            <a href="#" class="search-link">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
+                <path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
+              </svg>
+              <span class="visually-hidden">Поиск</span>
+              </a>  
             <div class="search-container">
               <form class="search" method="get" action="https://echo.htmlacademy.ru">
                 <input type="search" name="search-field" class="search-field" id="search" placeholder="Что ищем?">
@@ -164,19 +167,19 @@
             <legend>Жирность:</legend>
             <ul class="filter-radio-list">
               <li>
-                <input type="radio" name="fat-content" class="visually-hidden fat-content-radio" value="0%" id="fat-content-0">
+                <input type="radio" name="fat-content" class="visually-hidden filter-input fat-content-radio" value="0%" id="fat-content-0">
                 <label for="fat-content-0">0%</label>
               </li>
               <li>
-                <input type="radio" name="fat-content" class="visually-hidden fat-content-radio" value="max-10%" id="fat-content-max-10" checked>
+                <input type="radio" name="fat-content" class="visually-hidden filter-input fat-content-radio" value="max-10%" id="fat-content-max-10" checked>
                 <label for="fat-content-max-10">до 10%</label>
               </li>
               <li>
-                <input type="radio" name="fat-content" class="visually-hidden fat-content-radio" value="max-30%" id="fat-content-max-30">
+                <input type="radio" name="fat-content" class="visually-hidden filter-input fat-content-radio" value="max-30%" id="fat-content-max-30">
                 <label for="fat-content-max-30">до 30%</label>
               </li>
               <li>
-                <input type="radio" name="fat-content" class="visually-hidden fat-content-radio" value="min-30%" id="fat-content-min-30">
+                <input type="radio" name="fat-content" class="visually-hidden filter-input fat-content-radio" value="min-30%" id="fat-content-min-30">
                 <label for="fat-content-min-30">выше 30%</label>
               </li>
             </ul>
@@ -185,23 +188,23 @@
             <legend>Наполнители:</legend>
             <ul class="filter-checkbox-list">
               <li>
-                <input type="checkbox" name="chocolate" class="visually-hidden filter-checkbox" id="filter-chocolate" checked>
+                <input type="checkbox" name="chocolate" class="visually-hidden filter-input filter-checkbox" id="filter-chocolate" checked>
                 <label for="filter-chocolate">шоколадные</label>
               </li>
               <li>
-                <input type="checkbox" name="sugar" class="visually-hidden filter-checkbox" id="filter-sugar" checked>
+                <input type="checkbox" name="sugar" class="visually-hidden filter-input filter-checkbox" id="filter-sugar" checked>
                 <label for="filter-sugar">сахарные присыпки</label>
               </li>
               <li>
-                <input type="checkbox" name="fruit" class="visually-hidden filter-checkbox" id="filter-fruit">
+                <input type="checkbox" name="fruit" class="visually-hidden filter-input filter-checkbox" id="filter-fruit">
                 <label for="filter-fruit">фрукты</label>
               </li>
               <li>
-                <input type="checkbox" name="syrup" class="visually-hidden filter-checkbox" id="filter-syrup">
+                <input type="checkbox" name="syrup" class="visually-hidden filter-input filter-checkbox" id="filter-syrup">
                 <label for="filter-syrup">сиропы</label>
               </li>
               <li>
-                <input type="checkbox" name="jam" class="visually-hidden filter-checkbox" id="filter-jam">
+                <input type="checkbox" name="jam" class="visually-hidden filter-input filter-checkbox" id="filter-jam">
                 <label for="filter-jam">джемы</label>
               </li>
             </ul>
@@ -288,7 +291,7 @@
       </section>
       <ul class="pagination-list">
         <li class="pagination-item prev-page blocked">
-          <a></a>
+          <a><span class="visually-hidden">предыдущая страница</span></a>
         </li>
         <li class="pagination-item pagination-item-current"> <a class="current">1</a>
         </li>
@@ -301,7 +304,7 @@
         <li class="pagination-item"> <a href="#">5</a>
         </li>
         <li class="pagination-item next-page">
-          <a href="#"></a>
+          <a href="#"><span class="visually-hidden">следующая страница</span></a>
         </li>
       </ul>
     </main>
